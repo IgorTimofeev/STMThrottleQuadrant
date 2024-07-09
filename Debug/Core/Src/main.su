@@ -1,0 +1,12 @@
+../Core/Src/yoba/analog_pin.h:8:3:AnalogPin::AnalogPin(ADC_HandleTypeDef*, uint32_t)	24	static
+../Core/Src/yoba/digital_pin.h:7:3:DigitalPin::DigitalPin(GPIO_TypeDef*, uint32_t)	24	static
+../Core/Src/yoba/digital_pin.h:35:8:void DigitalPin::setValue(bool)	16	static
+../Core/Src/yoba/potentiometer.h:8:3:Potentiometer::Potentiometer(const AnalogPin&, float, float)	24	static
+../Core/Src/yoba/onboard_led.h:7:3:OnboardLED::OnboardLED(const DigitalPin&, uint32_t)	24	static
+../Core/Src/yoba/onboard_led.h:15:8:void OnboardLED::tick()	24	static
+../Core/Src/yoba/yoba.h:13:6:void yoba()	176	static
+../Core/Src/main.cpp:65:5:int main()	8	static
+../Core/Src/main.cpp:109:6:void SystemClock_Config()	88	static
+../Core/Src/main.cpp:155:13:void MX_ADC1_Init()	24	static
+../Core/Src/main.cpp:207:13:void MX_GPIO_Init()	40	static
+../Core/Src/main.cpp:236:6:void Error_Handler()	4	static,ignoring_inline_asm
