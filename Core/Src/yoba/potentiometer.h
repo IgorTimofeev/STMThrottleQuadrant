@@ -5,8 +5,8 @@
 
 class Potentiometer {
 	public:
-		Potentiometer(const AnalogPin& adcPin, float minimum, float maximum) :
-			_adcPin(adcPin),
+		Potentiometer(const AnalogPin& analogPin, float minimum, float maximum) :
+			_analogPin(analogPin),
 			_minimum(minimum),
 			_maximum(maximum)
 		{
@@ -14,7 +14,7 @@ class Potentiometer {
 		}
 
 		float getValue() const {
-			float value = (float) _adcPin.getValue() / 4096.0f;
+			float value = (float) _analogPin.getValue() / 4096.0f;
 
 			value = Math::clamp(value, _minimum, _maximum);
 
@@ -22,7 +22,7 @@ class Potentiometer {
 		}
 
 	private:
-		AnalogPin _adcPin;
+		AnalogPin _analogPin;
 		float _minimum;
 		float _maximum;
 };

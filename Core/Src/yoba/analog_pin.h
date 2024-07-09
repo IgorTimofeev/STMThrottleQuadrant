@@ -20,7 +20,9 @@ class AnalogPin {
 			// Changing channel
 			ADC_ChannelConfTypeDef channelConfig = {0};
 			channelConfig.SamplingTime = ADC_SAMPLETIME_15CYCLES;
-			channelConfig.Rank = 1;
+			// Hmmm, seems like it some sort of polling priority
+			// See https://stackoverflow.com/questions/73696752/how-are-ranks-interpreted-in-stm32-adc-multi-channel-scan-mode
+			channelConfig.Rank = _channel + 1;
 			channelConfig.Channel = _channel;
 			HAL_ADC_ConfigChannel(&hadc1, &channelConfig);
 
