@@ -33,12 +33,10 @@ class DigitalPin {
 		}
 
 		void setValue(bool value) {
-			// Wtf, "set" means "no signal"? OK
 			HAL_GPIO_WritePin(_port, _pin, value ? GPIO_PIN_RESET : GPIO_PIN_SET);
 		}
 
 		bool getValue() {
-			// Same shit
 			return HAL_GPIO_ReadPin(_port, _pin) == GPIO_PIN_RESET;
 		}
 

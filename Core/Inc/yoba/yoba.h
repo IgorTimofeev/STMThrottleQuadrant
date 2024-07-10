@@ -4,7 +4,7 @@
 #include "stdint.h"
 #include <stdbool.h>
 
-#include "joystick.h"
+#include "joystick/joystick.h"
 #include "digital_pin.h"
 
 Joystick joystick = Joystick();
@@ -15,8 +15,6 @@ void yobaMain() {
 
 	while (true) {
 		joystick.tick();
-
-		HAL_Delay(1);
 	}
 }
 

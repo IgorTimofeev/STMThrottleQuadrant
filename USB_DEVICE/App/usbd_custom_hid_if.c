@@ -96,39 +96,28 @@ __ALIGN_BEGIN static uint8_t CUSTOM_HID_ReportDesc_FS[USBD_CUSTOM_HID_REPORT_DES
 	0x09, 0x04,                    // USAGE (Joystick)
 	0xa1, 0x01,                    // COLLECTION (Application)
 
-
 	0x05, 0x01,                    //   USAGE_PAGE (Generic Desktop)
 	0x09, 0x01,                    //   USAGE (Pointer)
 	0xa1, 0x00,                    //   COLLECTION (Physical)
 	0x09, 0x30,                    //     USAGE (X)
 	0x09, 0x31,                    //     USAGE (Y)
 	0x09, 0x32,                    //     USAGE (Z)
-	0x15, 0x00,                    //     LOGICAL_MINIMUM (0)
-	0x26, 0x00, 0x10,              //     LOGICAL_MAXIMUM (4096)
-	0x75, 0x10,                    //     REPORT_SIZE (16)
-	0x95, 0x03,                    //     REPORT_COUNT (X)
-	0x81, 0x02,                    //     INPUT (Data,Var,Abs)
-	0xc0,                          //   END_COLLECTION
-
-	0x05, 0x01,                    //   USAGE_PAGE (Generic Desktop)
-	0x09, 0x01,                    //   USAGE (Pointer)
-	0xa1, 0x00,                    //   COLLECTION (Physical)
 	0x09, 0x33,                    //     USAGE (Rx)
 	0x09, 0x34,                    //     USAGE (Ry)
 	0x15, 0x00,                    //     LOGICAL_MINIMUM (0)
 	0x26, 0x00, 0x10,              //     LOGICAL_MAXIMUM (4096)
 	0x75, 0x10,                    //     REPORT_SIZE (16)
-	0x95, 0x02,                    //     REPORT_COUNT (X)
+	0x95, 0x05,                    //     REPORT_COUNT (X)
 	0x81, 0x02,                    //     INPUT (Data,Var,Abs)
 	0xC0,                          //   END_COLLECTION
 
 	0x05, 0x09,                    //   USAGE_PAGE (Button)
 	0x19, 0x01,                    //   USAGE_MINIMUM (Button 1)
-	0x29, 0x10,                    //   USAGE_MAXIMUM (Button X)
+	0x29, 0x14,                    //   USAGE_MAXIMUM (Button X)
 	0x15, 0x00,                    //   LOGICAL_MINIMUM (0)
 	0x25, 0x01,                    //   LOGICAL_MAXIMUM (1)
 	0x75, 0x01,                    //   REPORT_SIZE (1)
-	0x95, 0x10,                    //   REPORT_COUNT (16)
+	0x95, 0x20,                    //   REPORT_COUNT (32)
 	0x81, 0x02,                    //   INPUT (Data,Var,Abs)
   /* USER CODE END 0 */
   0xC0    /*     END_COLLECTION	             */
