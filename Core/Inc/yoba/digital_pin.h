@@ -46,6 +46,14 @@ class DigitalPin {
 			setValue(!getValue());
 		}
 
+		GPIO_TypeDef* getPort() {
+			return _port;
+		}
+
+		uint32_t getPin() {
+			return _pin;
+		}
+
 	private:
 		GPIO_TypeDef* _port;
 		uint32_t _pin;

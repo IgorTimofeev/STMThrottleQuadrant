@@ -30,9 +30,12 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Inc/main.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h \
- ../Core/Src/yoba/yoba.h ../Core/Src/yoba/analog_pin.h \
- ../Core/Src/yoba/math.h ../Core/Src/yoba/digital_pin.h \
- ../Core/Src/yoba/potentiometer.h ../Core/Src/yoba/encoder.h
+ ../USB_DEVICE/App/usb_device.h \
+ ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
+ ../USB_DEVICE/Target/usbd_conf.h ../Core/Inc/yoba/yoba.h \
+ ../Core/Inc/yoba/joystick.h ../Core/Inc/yoba/analog_pin.h \
+ ../Core/Inc/yoba/math.h ../Core/Inc/yoba/digital_pin.h \
+ ../Core/Inc/yoba/potentiometer.h ../Core/Inc/yoba/encoder.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -65,9 +68,13 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Inc/main.h \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h:
-../Core/Src/yoba/yoba.h:
-../Core/Src/yoba/analog_pin.h:
-../Core/Src/yoba/math.h:
-../Core/Src/yoba/digital_pin.h:
-../Core/Src/yoba/potentiometer.h:
-../Core/Src/yoba/encoder.h:
+../USB_DEVICE/App/usb_device.h:
+../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:
+../USB_DEVICE/Target/usbd_conf.h:
+../Core/Inc/yoba/yoba.h:
+../Core/Inc/yoba/joystick.h:
+../Core/Inc/yoba/analog_pin.h:
+../Core/Inc/yoba/math.h:
+../Core/Inc/yoba/digital_pin.h:
+../Core/Inc/yoba/potentiometer.h:
+../Core/Inc/yoba/encoder.h:
