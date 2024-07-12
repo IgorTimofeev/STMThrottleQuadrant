@@ -17,14 +17,15 @@ class Encoder {
 			_dtPin(dtPin),
 			_swPin(swPin)
 		{
-			_oldRotation = readRotation();
+			readRotation();
 		}
 
-		EncoderState getState() {
-			EncoderState state;
-			state.left = false;
-			state.right = false;
-			state.pressed = _swPin.getValue();
+		EncoderState read() {
+			EncoderState state = {
+				.left = false,
+				.right = false,
+				.pressed = _swPin.getValue()
+			};
 
 			auto rotation = readRotation();
 
@@ -48,7 +49,13 @@ class Encoder {
 					// Button simulation
 					case 0: case 5: case 10: case 15:
 						break;
-					case 1: case 7: case 8: case 14: case 3: case 12:
+					case 1: case 7: case 8: case 14:
+						state.right = true;
+						break;
+					case 2: case 4: case 11: case 13:
+						state.left = true;
+						break;
+					case 3: case 12:
 						state.right = true;
 						break;
 					default:
@@ -60,12 +67,10 @@ class Encoder {
 				_oldRotation = rotation;
 			}
 
-
 			return state;
 		}
 
 	private:
-
 		DigitalPin _clkPin;
 		DigitalPin _dtPin;
 		DigitalPin _swPin;

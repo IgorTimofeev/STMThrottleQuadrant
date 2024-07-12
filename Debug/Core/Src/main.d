@@ -32,15 +32,15 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Inc/main.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h \
  ../USB_DEVICE/App/usb_device.h \
  ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
- ../USB_DEVICE/Target/usbd_conf.h ../Core/Inc/yoba/yoba.h \
- ../Core/Inc/yoba/joystick/joystick.h \
- ../Core/Inc/yoba/joystick/report_descriptor.h \
- ../Core/Inc/yoba/joystick/../analog_pin.h \
- ../Core/Inc/yoba/joystick/../math.h \
- ../Core/Inc/yoba/joystick/../digital_pin.h \
- ../Core/Inc/yoba/joystick/../potentiometer.h \
- ../Core/Inc/yoba/joystick/../encoder.h \
- ../Core/Inc/yoba/joystick/button.h ../Core/Inc/yoba/joystick/encoder.h
+ ../USB_DEVICE/Target/usbd_conf.h ../Core/Src/yoba/yoba.h \
+ ../Core/Src/yoba/joystick/joystick.h \
+ ../Core/Src/yoba/joystick/../analog_pin.h \
+ ../Core/Src/yoba/joystick/../math.h \
+ ../Core/Src/yoba/joystick/../digital_pin.h \
+ ../Core/Src/yoba/joystick/../potentiometer.h \
+ ../Core/Src/yoba/joystick/../encoder.h \
+ ../Core/Src/yoba/joystick/report_descriptor.h \
+ ../Core/Src/yoba/joystick/button.h ../Core/Src/yoba/joystick/encoder.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -76,13 +76,13 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Inc/main.h \
 ../USB_DEVICE/App/usb_device.h:
 ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:
 ../USB_DEVICE/Target/usbd_conf.h:
-../Core/Inc/yoba/yoba.h:
-../Core/Inc/yoba/joystick/joystick.h:
-../Core/Inc/yoba/joystick/report_descriptor.h:
-../Core/Inc/yoba/joystick/../analog_pin.h:
-../Core/Inc/yoba/joystick/../math.h:
-../Core/Inc/yoba/joystick/../digital_pin.h:
-../Core/Inc/yoba/joystick/../potentiometer.h:
-../Core/Inc/yoba/joystick/../encoder.h:
-../Core/Inc/yoba/joystick/button.h:
-../Core/Inc/yoba/joystick/encoder.h:
+../Core/Src/yoba/yoba.h:
+../Core/Src/yoba/joystick/joystick.h:
+../Core/Src/yoba/joystick/../analog_pin.h:
+../Core/Src/yoba/joystick/../math.h:
+../Core/Src/yoba/joystick/../digital_pin.h:
+../Core/Src/yoba/joystick/../potentiometer.h:
+../Core/Src/yoba/joystick/../encoder.h:
+../Core/Src/yoba/joystick/report_descriptor.h:
+../Core/Src/yoba/joystick/button.h:
+../Core/Src/yoba/joystick/encoder.h:

@@ -22,6 +22,6 @@ struct JoystickReportDescriptor {
 		// 3 rotary encoders with 3 virtual buttons per each (1 button for left rotation, 1 for push button and 1 for right rotation)
 		// 3 push buttons
 		// 1 landing gear toggle switch with 2 virtual buttons
-		uint32_t buttons;
+		uint16_t buttons;
 };
 #pragma pack(pop)

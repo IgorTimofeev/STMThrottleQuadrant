@@ -1,6 +1,5 @@
 #pragma once
 
-#include <yoba/joystick/report_descriptor.h>
 #include "stm32f4xx_hal.h"
 #include "usb_device.h"
 #include "stdint.h"
@@ -28,9 +27,16 @@ class JoystickButton : public JoystickAbstractButton {
 
 		}
 
-		void updateReport(JoystickReportDescriptor& report, uint8_t& index) {
-			report.buttons |= _pin.getValue() << index++;
+		void tick() {
+			_state = _pin.getValue();
 		}
+
+		void updateReport(JoystickReportDescriptor& report, uint8_t& index) {
+			report.buttons |= _state << index++;
+		}
+
+	private:
+		bool _state = false;
 };
 
 class JoystickToggleButton : public JoystickAbstractButton {
@@ -39,7 +45,7 @@ class JoystickToggleButton : public JoystickAbstractButton {
 			_lastPinValue = _pin.getValue();
 		}
 
-		void updateReport(JoystickReportDescriptor& report, uint8_t& index) {
+		void tick() {
 			auto pinValue = _pin.getValue();
 			auto time = HAL_GetTick();
 
@@ -59,14 +65,16 @@ class JoystickToggleButton : public JoystickAbstractButton {
 
 			if (time >= _pressDeadline2)
 				_pressDeadline2 = 0;
+		}
 
+		void updateReport(JoystickReportDescriptor& report, uint8_t& index) {
 			report.buttons |= (_pressDeadline1 > 0) << index++;
 			report.buttons |= (_pressDeadline2 > 0) << index++;
 		}
 
 	private:
+		uint16_t _pressDuration = 250;
 		uint32_t _pressDeadline1 = 0;
 		uint32_t _pressDeadline2 = 0;
-		uint16_t _pressDuration = 500;
 		bool _lastPinValue = false;
 };

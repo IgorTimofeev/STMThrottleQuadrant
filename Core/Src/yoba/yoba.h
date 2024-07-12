@@ -19,10 +19,5 @@ void yobaMain() {
 }
 
 void yobaInterrupt(uint16_t pin) {
-	switch (pin) {
-		case GPIO_PIN_12:
-			// Похуй...
-
-			break;
-	}
+	joystick.interrupt(pin);
 }
